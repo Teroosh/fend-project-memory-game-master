@@ -2,6 +2,17 @@
  * Create a list that holds all of your cards
  */
 
+const everyCard = document.querySelectorAll('.card');
+
+function flipCard() {
+for (let i = 0; i <= everyCard.length; i++) {
+	const playCards = everyCard[i];
+	playCards.addEventListener('click', function() {
+		this.classList.add('open', 'show');
+	});
+};
+}
+flipCard();
 
 /*
  * Display the cards on the page
