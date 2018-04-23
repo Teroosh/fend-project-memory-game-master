@@ -4,6 +4,10 @@
 
 const everyCard = document.querySelectorAll('.card');
 
+/*
+ * Function for flipping the card
+ */
+
 function flipCard() {
 for (let i = 0; i <= everyCard.length; i++) {
 	const playCards = everyCard[i];
@@ -13,6 +17,25 @@ for (let i = 0; i <= everyCard.length; i++) {
 };
 }
 flipCard();
+
+/*
+ * function fot verifying if the cards match or not
+ */
+
+function verifyMatch () {
+    let openCard = document.querySelectorAll('.open');
+    let oc = openCard.length;
+    if (oc === 2) {
+        openCard.classList.remove('open', 'show');
+        openCard.classList.add('match');
+    } else {
+        openCard.classList.remove('open', 'show');
+        openCard.classList.add('unmatch');
+    }
+}
+verifyMatch();
+
+setTimeout(verifyMatch(), 1000);
 
 /*
  * Display the cards on the page
