@@ -77,9 +77,9 @@ function shuffleSymbols () {
     for (let i = 0; i <= everyCard.length; i++) {
     const playCards = everyCard[i];
     playCards.append('<i></i>');
+    for (let y = 0; y <= listCards.length; y++)
     $('i').addClass(function shuffle (listCards));
     };
-    return listCards;
 }
 
 /*
