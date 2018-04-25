@@ -69,7 +69,14 @@ function shuffle(array) {
     return array;
 }
 
+// Card's classes removal
 
+function RemoveSymbols () {
+    for (let i = 0; i <= everyCard.length; i++) {
+    const playCards = everyCard[i];
+    playCards.removeChild(playCards.childNodes[0]);
+    };
+}
 
 /*
  * set up the event listener for a card. If a card is clicked:
