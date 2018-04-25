@@ -78,6 +78,17 @@ function RemoveSymbols () {
     };
 }
 
+// Shuffle symbols to the card
+
+function shuffleSymbols () {
+    for (let i = 0; i <= everyCard.length; i++) {
+    const playCards = everyCard[i];
+    playCards.append('<i></i>');
+    $('i').addClass(function shuffle (listCards));
+    };
+    return listCards;
+}
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
