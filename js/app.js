@@ -46,7 +46,15 @@ setTimeout(verifyMatch(), 1000);
  *   - add each card's HTML to the page
  */
 
+ // The list shuffling
+
+function createCard(){
+    listCards = shuffle(listCards);
+    return listCards;
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
+
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -60,6 +68,7 @@ function shuffle(array) {
 
     return array;
 }
+
 
 
 /*
