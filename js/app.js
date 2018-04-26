@@ -117,22 +117,13 @@ function countStars() {
 }
 
 // Function for setting the timer
-// Use from https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
+// Use from https://www.w3schools.com/js/tryit.asp?filename=tryjs_setinterval2
 
-function setTimer() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('timer').innerHTML =
-    h + ":" + m + ":" + s;
-    var t = setTimeout(setTimer, 500);
-}
-function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("timer").innerHTML = d.toLocaleTimeString();
 }
 
 // Function for restarting the game
