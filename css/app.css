@@ -119,6 +119,10 @@ h1 {
  * Styles for the Pop Up
  */
 
+ .popup {
+    display: none;
+ }
+
 /*
  * Styles for checkmark
  * Use from https://jsfiddle.net/Hybrid8287/gtb1avet/1/
