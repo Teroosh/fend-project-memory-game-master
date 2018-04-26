@@ -154,6 +154,22 @@ function restartGame() {
 }
 restartGame();
 
+// Function when game is over
+
+function endOfGame() {
+    let matchCard = document.querySelectorAll('.match');
+    let container = docuent.querySelector('.container');
+    let popup = docuent.querySelector('.popup');
+    if (matchCard.length === 16) {
+        myStopFunction();
+        container.style.display === 'none';
+        popup.style.display = 'block';
+    }
+}
+endOfGame();
+
+setTimeout(endOfGame(), 1000);
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
