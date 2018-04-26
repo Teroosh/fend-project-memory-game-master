@@ -116,6 +116,10 @@ h1 {
 }
 
 /*
+ * Styles for the Pop Up
+ */
+
+/*
  * Styles for checkmark
  * Use from https://jsfiddle.net/Hybrid8287/gtb1avet/1/
  */
@@ -138,7 +142,7 @@ h1 {
   stroke-width: 2;
   stroke: #fff;
   stroke-miterlimit: 10;
-  margin: 10% auto;
+  margin: 5% auto;
   box-shadow: inset 0px 0px 0px #7ac142;
   animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
 }
@@ -167,4 +171,23 @@ h1 {
   100% {
     box-shadow: inset 0px 0px 0px 30px #7ac142;
   }
+}
+
+ /*
+ * Style for the text in Pop Up
+ */
+
+.popText {
+    text-align: center;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.congrats {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.summary, .woo {
+    font-size: 20px;
 }
