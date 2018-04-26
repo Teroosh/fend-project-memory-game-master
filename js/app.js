@@ -116,14 +116,23 @@ function countStars() {
     };
 }
 
+// Function for running the timer
+
+function runTimer() {
+    everyCard.onclick = setTimer();
+}
+runTimer();
+
 // Function for setting the timer
 // Use from https://www.w3schools.com/js/tryit.asp?filename=tryjs_setinterval2
 
-var myVar = setInterval(myTimer, 1000);
+function setTimer() {
+    var myVar = setInterval(myTimer, 1000);
 
-function myTimer() {
+    function myTimer() {
     var d = new Date();
     document.getElementById("timer").innerHTML = d.toLocaleTimeString();
+}
 }
 
 // Function for restarting the game
@@ -134,7 +143,7 @@ function restartGame() {
         shuffleSymbols();
         countMoves();
         countStars();
-        setTimer();
+        runTimer();
     }
 }
 restartGame();
