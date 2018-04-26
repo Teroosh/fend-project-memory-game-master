@@ -4,8 +4,9 @@
 
 const everyCard = document.querySelectorAll('.card');
 
-var listCards = ["fa fa-diamond","fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf", "fa fa-bicycle", "fa fa-diamond", "fa fa-bomb", "fa fa-leaf", "fa fa-bomb", "fa fa-bolt", "fa fa-bicycle", "fa fa-paper-plane-o", "fa fa-cube" ];
+const listCards = ["fa fa-diamond","fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf", "fa fa-bicycle", "fa fa-diamond", "fa fa-bomb", "fa fa-leaf", "fa fa-bomb", "fa fa-bolt", "fa fa-bicycle", "fa fa-paper-plane-o", "fa fa-cube" ];
 
+const move = 0;
 /*
  * Function for flipping the card
  */
@@ -77,9 +78,18 @@ function shuffleSymbols () {
     for (let i = 0; i <= everyCard.length; i++) {
     const playCards = everyCard[i];
     playCards.append('<i></i>');
-    for (let y = 0; y <= listCards.length; y++)
+    };
+    for (let y = 0; y <= listCards.length; y++) {
     $('i').addClass(function shuffle (listCards));
     };
+}
+
+// Function for move counter
+
+function countMoves () {
+    move++;
+    $('.moves').text(move);
+    countStars(move);
 }
 
 /*
