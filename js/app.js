@@ -92,13 +92,29 @@ function countMoves () {
         $('.moves').innerHTML = move;
     }
     if (move % 2 = 0) {
-        return move += 1;
+        return move;
     } else {
-        return move += 0;
+        return move -= 1;
     }
     countStars();
 }
 
+// Function for take the stars away
+
+function countStars() {
+    if (move <= 10) {
+        return null;
+    } if else (move > 10 || move <= 15) {
+       $('.third').removeChild('i');
+    } if else (move > 15 || move <= 20) {
+       $('.second').removeChild('i') &&
+       $('.third').removeChild('i');
+    } else {
+       $('.first').removeChild('i') &&
+       $('.second').removeChild('i') &&
+       $('.third').removeChild('i');
+    };
+}
 
 /*
  * set up the event listener for a card. If a card is clicked:
