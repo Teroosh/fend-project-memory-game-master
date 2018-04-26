@@ -124,15 +124,21 @@ function runTimer() {
 runTimer();
 
 // Function for setting the timer
-// Use from https://www.w3schools.com/js/tryit.asp?filename=tryjs_setinterval2
+// Use from https://www.w3schools.com/jsref/met_win_clearinterval.asp
 
 function setTimer() {
-    var myVar = setInterval(myTimer, 1000);
+    var myVar = setInterval(function(){ myTimer() }, 1000);
 
     function myTimer() {
     var d = new Date();
     document.getElementById("timer").innerHTML = d.toLocaleTimeString();
 }
+}
+
+// Function for stopping the timer
+
+function myStopFunction() {
+    clearInterval(myVar);
 }
 
 // Function for restarting the game
