@@ -87,10 +87,18 @@ function shuffleSymbols () {
 // Function for move counter
 
 function countMoves () {
-    move++;
-    $('.moves').text(move);
-    countStars(move);
+    $('.deck').onclick = function() {
+        move += 1;
+        $('.moves').innerHTML = move;
+    }
+    if (move % 2 = 0) {
+        return move += 1;
+    } else {
+        return move += 0;
+    }
+    countStars();
 }
+
 
 /*
  * set up the event listener for a card. If a card is clicked:
