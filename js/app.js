@@ -109,14 +109,14 @@ function countStars() {
     if (move <= 10) {
         return null;
     } if else (move > 10 || move <= 15) {
-       $('.third').removeChild('i');
+       $('.third').removeChild('i') &&
+       $('.third').append('<i class="fa fa-star-o">');
     } if else (move > 15 || move <= 20) {
-       $('.second').removeChild('i') &&
-       $('.third').removeChild('i');
+       $('.second, .third').removeChild('i') &&
+       $('.second, .third').append('<i class="fa fa-star-o">');
     } else {
-       $('.first').removeChild('i') &&
-       $('.second').removeChild('i') &&
-       $('.third').removeChild('i');
+       $('.first, .second, .third').removeChild('i') &&
+       $('.first, .second, .third').append('<i class="fa fa-star-o">');
     };
 }
 
@@ -157,6 +157,10 @@ function restartGame() {
     }
 }
 restartGame();
+
+// Function for adjustment the text in Pop Up
+
+
 
 // Function when game is over
 
