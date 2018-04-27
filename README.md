@@ -1,22 +1,23 @@
 # Memory Game Project
 
-## Table of Contents
+The memory game project using HTML, CSS, and JavaScript. The game board consists of sixteen "cards" arranged in a grid. The deck is made up of eight different pairs of cards, each with different symbols on one side. The cards are arranged randomly on the grid with the symbol face down. The gameplay rules are very simple: flip over two hidden cards at a time to locate the ones that match. he game ends once all cards have been correctly matched.
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+## How to contribute
 
-## Instructions
+Find any typos? Have another resource you think should be included? Contributions are welcome!
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+1. First, fork this repository
+2. Next, clone this repository to your desktop to make changes
+3. Once you've pushed changes to your local repository, you can issue a pull request
 
-To get started, open `js/app.js` and start building out the app's functionality
+## Contribution Guidelines
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+Please follow the instruction from Udacity Style Guide.
 
-## Contributing
+For more information visite:
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+http://udacity.github.io/frontend-nanodegree-styleguide/
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+## License
 
 This project is licensed under the terms of the MIT license.
