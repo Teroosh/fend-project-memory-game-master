@@ -21,6 +21,8 @@ for (let i = 0; i <= everyCard.length; i++) {
 	});
 };
 countMoves();
+verifyMatch();
+noMatch();
 }
 flipCard();
 
@@ -33,16 +35,19 @@ function verifyMatch () {
     let openCard = document.querySelectorAll('.open');
     let oc = openCard.length;
     if (oc === 2 && openCard.children([0]).html() === openCard.children([1]).html()) {
-        this.classList.remove('open', 'show');
-        this.classList.add('match');
+        this.removeClass('open', 'show').addClass('match');
     } else {
-        this.classList.remove('open', 'show');
-        this.classList.add('unmatch');
+        this.removeClass('open', 'show').addClass('unmatch');
     };
 }
-verifyMatch();
 
 setTimeout(verifyMatch(), 1000);
+
+/**TODO:
+function noMatch() {
+    let unm = $('.unmatch')
+}
+*/
 
 /**
 * @description Shuffles cards
