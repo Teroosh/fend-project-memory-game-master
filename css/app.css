@@ -17,8 +17,8 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
-    font-family: 'Coda', cursive;
+    background: #ffffff url(../img/geometry2.png); /* Background pattern from Subtle Patterns */
+    font-family: "Coda", cursive;
 }
 
 .container {
@@ -29,7 +29,7 @@ body {
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 300;
 }
 
@@ -163,6 +163,7 @@ h1 {
     stroke-dashoffset: 0;
   }
 }
+
 @keyframes scale {
   0%, 100% {
     transform: none;
@@ -171,6 +172,7 @@ h1 {
     transform: scale3d(1.1, 1.1, 1);
   }
 }
+
 @keyframes fill {
   100% {
     box-shadow: inset 0px 0px 0px 30px #7ac142;
@@ -181,7 +183,7 @@ h1 {
  * Style for the text in Pop Up
  */
 
-.popText {
+.pop-text {
     text-align: center;
     padding-top: 0;
     margin-top: 0;
@@ -192,7 +194,8 @@ h1 {
     font-weight: bold;
 }
 
-.summary, .woo {
+.summary,
+.woo {
     font-size: 20px;
 }
 
@@ -215,4 +218,5 @@ h1 {
 }
 
 .button:hover {
-    background-color: #304D1A;
+    background-color: #304d1a;
+}
