@@ -11,6 +11,7 @@ const move = 0;
 const container = docuent.querySelector('.container');
 
 const popup = docuent.querySelector('.popup');
+
 /*
  * Function for flipping the card
  */
@@ -94,11 +95,6 @@ function countMoves () {
     $('.deck').onclick = function() {
         move += 1;
         $('.moves').innerHTML = move;
-    }
-    if (move % 2 = 0) {
-        return move;
-    } else {
-        return move -= 1;
     }
     countStars();
 }
