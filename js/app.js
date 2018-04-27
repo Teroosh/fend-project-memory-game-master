@@ -8,9 +8,9 @@ const listCards = ["fa fa-diamond","fa fa-paper-plane-o", "fa fa-anchor", "fa fa
 
 const move = 0;
 
-const container = docuent.querySelector('.container');
+const container = document.querySelector('.container');
 
-const popup = docuent.querySelector('.popup');
+const popup = document.querySelector('.popup');
 
 /*
  * Function for flipping the card
@@ -23,6 +23,7 @@ for (let i = 0; i <= everyCard.length; i++) {
 		this.classList.add('open', 'show');
 	});
 };
+countMoves();
 }
 flipCard();
 
@@ -92,7 +93,7 @@ function shuffleSymbols () {
 // Function for move counter
 
 function countMoves () {
-    $('.deck').onclick = function() {
+    everyCard.onclick = function() {
         move += 1;
         $('.moves').innerHTML = move;
     }
@@ -102,12 +103,12 @@ function countMoves () {
 // Function for take the stars away
 
 function countStars() {
-    if (move <= 10) {
+    if (move <= 17) {
         return null;
-    } if else (move > 10 || move <= 15) {
+    } if else (move > 17 || move <= 22) {
        $('.third').removeChild('i') &&
        $('.third').append('<i class="fa fa-star-o">');
-    } if else (move > 15 || move <= 20) {
+    } if else (move > 22 || move <= 27) {
        $('.second, .third').removeChild('i') &&
        $('.second, .third').append('<i class="fa fa-star-o">');
     } else {
