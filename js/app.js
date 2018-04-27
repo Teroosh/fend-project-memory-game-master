@@ -160,7 +160,10 @@ restartGame();
 
 // Function for adjustment the text in Pop Up
 
-
+function starsNo() {
+    let sn = $('.fa fa-star').length;
+    $('.starsNumber').html(sn);
+}
 
 // Function when game is over
 
@@ -168,6 +171,8 @@ function endOfGame() {
     let matchCard = document.querySelectorAll('.match');
     if (matchCard.length === 16) {
         myStopFunction();
+        starsNo();
+        countMoves();
         container.style.display === 'none';
         popup.style.display = 'block';
     }
