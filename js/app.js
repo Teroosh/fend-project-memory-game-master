@@ -7,6 +7,10 @@ const everyCard = document.querySelectorAll('.card');
 const listCards = ["fa fa-diamond","fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf", "fa fa-bicycle", "fa fa-diamond", "fa fa-bomb", "fa fa-leaf", "fa fa-bomb", "fa fa-bolt", "fa fa-bicycle", "fa fa-paper-plane-o", "fa fa-cube" ];
 
 const move = 0;
+
+const container = docuent.querySelector('.container');
+
+const popup = docuent.querySelector('.popup');
 /*
  * Function for flipping the card
  */
@@ -158,8 +162,6 @@ restartGame();
 
 function endOfGame() {
     let matchCard = document.querySelectorAll('.match');
-    let container = docuent.querySelector('.container');
-    let popup = docuent.querySelector('.popup');
     if (matchCard.length === 16) {
         myStopFunction();
         container.style.display === 'none';
@@ -169,6 +171,17 @@ function endOfGame() {
 endOfGame();
 
 setTimeout(endOfGame(), 1000);
+
+// Function for play game again when click on the button
+
+function playAgain() {
+    $('.button').onclick = function() {
+        container.style.display = 'block';
+        popup.style.display === 'none';
+        restartGame();
+    };
+}
+playAgain();
 
 /*
  * set up the event listener for a card. If a card is clicked:
