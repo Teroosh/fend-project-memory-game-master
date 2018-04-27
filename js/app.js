@@ -34,12 +34,12 @@ flipCard();
 function verifyMatch () {
     let openCard = document.querySelectorAll('.open');
     let oc = openCard.length;
-    if (oc === 2) {
-        openCard.classList.remove('open', 'show');
-        openCard.classList.add('match');
+    if (oc === 2 && openCard.children([0]).html() === openCard.children([1]).html()) {
+        this.classList.remove('open', 'show');
+        this.classList.add('match');
     } else {
-        openCard.classList.remove('open', 'show');
-        openCard.classList.add('unmatch');
+        this.classList.remove('open', 'show');
+        this.classList.add('unmatch');
     }
 }
 verifyMatch();
