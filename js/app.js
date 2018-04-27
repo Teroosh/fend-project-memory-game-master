@@ -1,10 +1,6 @@
-/*
- * Create a list that holds all of your cards
- */
-
 const everyCard = document.querySelectorAll('.card');
 
-const listCards = ["fa fa-diamond","fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf", "fa fa-bicycle", "fa fa-diamond", "fa fa-bomb", "fa fa-leaf", "fa fa-bomb", "fa fa-bolt", "fa fa-bicycle", "fa fa-paper-plane-o", "fa fa-cube" ];
+const listCards = ['fa fa-diamond','fa fa-paper-plane-o', 'fa fa-anchor', 'fa fa-bolt', 'fa fa-cube', 'fa fa-anchor', 'fa fa-leaf', 'fa fa-bicycle', 'fa fa-diamond', 'fa fa-bomb', 'fa fa-leaf', 'fa fa-bomb', 'fa fa-bolt', 'fa fa-bicycle', 'fa fa-paper-plane-o', 'fa fa-cube'];
 
 const move = 0;
 
@@ -12,9 +8,10 @@ const container = document.querySelector('.container');
 
 const popup = document.querySelector('.popup');
 
-/*
- * Function for flipping the card
- */
+ /**
+* @description Flips the cards
+* @returns {functions}
+*/
 
 function flipCard() {
 for (let i = 0; i <= everyCard.length; i++) {
@@ -27,9 +24,10 @@ countMoves();
 }
 flipCard();
 
-/*
- * function fot verifying if the cards match or not
- */
+ /**
+* @description Verifies if the cards match or not
+* @returns {function}
+*/
 
 function verifyMatch () {
     let openCard = document.querySelectorAll('.open');
@@ -40,20 +38,18 @@ function verifyMatch () {
     } else {
         this.classList.remove('open', 'show');
         this.classList.add('unmatch');
-    }
+    };
 }
 verifyMatch();
 
 setTimeout(verifyMatch(), 1000);
 
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
-
-// Shuffle function from http://stackoverflow.com/a/2450976
+/**
+* @description Shuffles cards
+* @param {array}
+* @returns {array}
+* @source http://stackoverflow.com/a/2450976
+*/
 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -69,7 +65,9 @@ function shuffle(array) {
     return array;
 }
 
-// Card's classes removal
+/**
+* @description Removes card's classes
+*/
 
 function removeSymbols () {
     for (let i = 0; i <= everyCard.length; i++) {
@@ -78,7 +76,9 @@ function removeSymbols () {
     };
 }
 
-// Shuffle symbols to the card
+/**
+* @description Shuffles the symbols to the card
+*/
 
 function shuffleSymbols () {
     for (let i = 0; i <= everyCard.length; i++) {
@@ -90,7 +90,10 @@ function shuffleSymbols () {
     };
 }
 
-// Function for move counter
+ /**
+* @description Moves a counter
+* @returns {function}
+*/
 
 function countMoves () {
     everyCard.onclick = function() {
@@ -100,7 +103,9 @@ function countMoves () {
     countStars();
 }
 
-// Function for take the stars away
+ /**
+* @description Takes the stars away
+*/
 
 function countStars() {
     if (move <= 17) {
@@ -117,32 +122,43 @@ function countStars() {
     };
 }
 
-// Function for running the timer
+/**
+* @description Runs the timer
+* @returns {function}
+*/
 
 function runTimer() {
     everyCard.onclick = setTimer();
 }
 runTimer();
 
-// Function for setting the timer
-// Use from https://www.w3schools.com/jsref/met_win_clearinterval.asp
+/**
+* @description Sets the timer
+* @source https://www.w3schools.com/jsref/met_win_clearinterval.asp
+*/
 
 function setTimer() {
     var myVar = setInterval(function(){ myTimer() }, 1000);
 
     function myTimer() {
     var d = new Date();
-    document.getElementById("timer").innerHTML = d.toLocaleTimeString();
-}
+    document.getElementById('timer').innerHTML = d.toLocaleTimeString();
+    }
 }
 
-// Function for stopping the timer
+/**
+* @description Stops the timer
+* @source https://www.w3schools.com/jsref/met_win_clearinterval.asp
+*/
 
 function myStopFunction() {
     clearInterval(myVar);
 }
 
-// Function for restarting the game
+/**
+* @description Restarts the game
+* @returns {function}
+*/
 
 function restartGame() {
     $('.restart').onclick = function() {
@@ -155,14 +171,19 @@ function restartGame() {
 }
 restartGame();
 
-// Function for adjustment the text in Pop Up
+/**
+* @description Adjusts the text in Pop Up
+*/
 
 function starsNo() {
     let sn = $('.fa fa-star').length;
     $('.starsNumber').html(sn);
 }
 
-// Function when game is over
+/**
+* @description Finishes the game
+* @returns {function}
+*/
 
 function endOfGame() {
     let matchCard = document.querySelectorAll('.match');
@@ -172,30 +193,22 @@ function endOfGame() {
         countMoves();
         container.style.display === 'none';
         popup.style.display = 'block';
-    }
+    };
 }
 endOfGame();
 
 setTimeout(endOfGame(), 1000);
 
-// Function for play game again when click on the button
+/**
+* @description Plays game again when click on the button
+* @returns {function}
+*/
 
 function playAgain() {
     $('.button').onclick = function() {
         container.style.display = 'block';
         popup.style.display === 'none';
         restartGame();
-    };
+    }
 }
 playAgain();
-
-/*
- * set up the event listener for a card. If a card is clicked:
- *  - display the card's symbol (put this functionality in another function that you call from this one)
- *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
- *  - if the list already has another card, check to see if the two cards match
- *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
- *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
- *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
- *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
- */
