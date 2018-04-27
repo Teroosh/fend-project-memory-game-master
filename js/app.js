@@ -28,7 +28,6 @@ flipCard();
 
  /**
 * @description Verifies if the cards match or not
-* @returns {function}
 */
 
 function verifyMatch () {
@@ -41,13 +40,16 @@ function verifyMatch () {
     };
 }
 
-setTimeout(verifyMatch(), 1000);
+setTimeout(verifyMatch(), 2000);
 
-/**TODO:
-function noMatch() {
-    let unm = $('.unmatch')
-}
+ /**
+* @description Removes class if cards don't match
 */
+
+function noMatch() {
+    $('.card').removeClass('unmatch');
+}
+setTimeout(noMatch(), 2200);
 
 /**
 * @description Shuffles cards
