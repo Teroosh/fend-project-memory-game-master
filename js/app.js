@@ -20,9 +20,6 @@ for (let i = 0; i <= everyCard.length; i++) {
 		this.classList.add('open', 'show');
 	});
 };
-countMoves();
-verifyMatch();
-noMatch();
 }
 flipCard();
 
@@ -39,7 +36,7 @@ function verifyMatch () {
         this.removeClass('open', 'show').addClass('unmatch');
     };
 }
-
+verifyMatch();
 setTimeout(verifyMatch(), 2000);
 
  /**
@@ -49,6 +46,7 @@ setTimeout(verifyMatch(), 2000);
 function noMatch() {
     $('.card').removeClass('unmatch');
 }
+noMatch();
 setTimeout(noMatch(), 2200);
 
 /**
@@ -109,6 +107,7 @@ function countMoves () {
     }
     countStars();
 }
+countMoves();
 
  /**
 * @description Takes the stars away
