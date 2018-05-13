@@ -10,7 +10,7 @@ const popup = document.querySelector('.popup');
 
  /**
 * @description Flips the cards
-* @returns {functions}
+* @returns {function}
 */
 
 function flipCard() {
@@ -25,6 +25,7 @@ flipCard();
 
  /**
 * @description Verifies if the cards match or not
+* @returns {function}
 */
 
 function verifyMatch () {
@@ -41,6 +42,7 @@ setTimeout(verifyMatch(), 2000);
 
  /**
 * @description Removes class if cards don't match
+* @returns {function}
 */
 
 function noMatch() {
@@ -91,7 +93,7 @@ function shuffleSymbols () {
     playCards.append('<i></i>');
     };
     for (let y = 0; y <= listCards.length; y++) {
-    $('i').addClass(function shuffle (listCards));
+    $('i').addClass(listCards);
     };
 }
 
