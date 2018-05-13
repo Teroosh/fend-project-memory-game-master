@@ -118,10 +118,10 @@ countMoves();
 function countStars() {
     if (move <= 17) {
         return null;
-    } if else (move > 17 || move <= 22) {
+    } else if (move > 17 && move <= 22) {
        $('.third').removeChild('i') &&
        $('.third').append('<i class="fa fa-star-o">');
-    } if else (move > 22 || move <= 27) {
+    } else if (move > 22 && move <= 27) {
        $('.second, .third').removeChild('i') &&
        $('.second, .third').append('<i class="fa fa-star-o">');
     } else {
